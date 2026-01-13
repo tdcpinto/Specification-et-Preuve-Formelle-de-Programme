@@ -9,7 +9,7 @@ int max(int x, int y) {
     } else {
         res = y;
     }
-    return y;
+    return res;
 }
 
 int main() {
