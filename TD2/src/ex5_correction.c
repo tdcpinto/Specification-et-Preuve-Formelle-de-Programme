@@ -14,8 +14,6 @@ int sum(int n) {
 
     /*@ loop invariant I1: 0 <= i <= n + 1;
         loop invariant I2: res == i * (i - 1) / 2;
-        loop invariant I3: res <= INT_MAX;
-        loop invariant I4: res >= 0;
         loop assigns i, res;
     */
     while(i <= n) {
