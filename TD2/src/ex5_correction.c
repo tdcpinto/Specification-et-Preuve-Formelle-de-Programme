@@ -1,0 +1,30 @@
+#ifdef __FRAMAC__
+#include "__fc_builtin.h"
+#endif
+
+#include <limits.h>
+
+/*@ requires n >= 0 && n * (n + 1) / 2 <= INT_MAX;
+    ensures \result == n * (n + 1) / 2;
+    assigns \nothing;
+*/
+int sum(int n) {
+    int res = 0;
+    int i = 0;
+
+    /*@ loop invariant I1: 0 <= i <= n + 1;
+        loop invariant I2: res == i * (i - 1) / 2;
+        loop invariant I3: res <= INT_MAX;
+        loop invariant I4: res >= 0;
+        loop assigns i, res;
+    */
+    while(i <= n) {
+        res += i;
+        i += 1;
+    }
+    return res;
+}
+
+int main() {
+    return sum(12);
+}
