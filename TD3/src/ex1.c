@@ -5,6 +5,8 @@ typedef enum {
     MIN
 } Action;
 
+// pensez à enlever l'espace avant l'arobase
+
 /* @ predicate min_predicate(integer min, int * tab, integer size) = 
         un prédicat qui est vrai si la valeur 'min' est plus
         petite que toutes les valeurs du tableau
